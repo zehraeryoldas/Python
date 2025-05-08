@@ -24,23 +24,23 @@ import matplotlib.pyplot as plt
 #mean ortalama süreyi hesaplar
 #plot sonuçları grafikte gösterir
 
-# df.groupby('Makine')['Ariza Süresi (dk)'].mean().plot(
-#     kind='bar',
-#     title='Makine Bazlı Ortalama Arıza Süresi',
-#     ylabel='Süre (dk)',
-#     xlabel='Makine',
-#     color='pink',
-#     edgecolor='yellow'
-# )
+df.groupby('Makine')['Ariza Süresi (dk)'].mean().plot(
+    kind='bar',
+    title='Makine Bazlı Ortalama Arıza Süresi',
+    ylabel='Süre (dk)',
+    xlabel='Makine',
+    color='pink',
+    edgecolor='yellow'
+)
 
 # Pasta grafiği çiz
-df.groupby('Makine')['Ariza Süresi (dk)'].mean().plot(
-    kind='pie',
-    autopct='%1.1f%%',
-    startangle=90,
-    ylabel='',
-    title='Makine Bazlı Arıza Süresi Oranı'
-)
+# df.groupby('Makine')['Ariza Süresi (dk)'].mean().plot(
+#     kind='pie',
+#     autopct='%1.1f%%',
+#     startangle=90,
+#     ylabel='',
+#     title='Makine Bazlı Arıza Süresi Oranı'
+# )
 
 plt.tight_layout() # Grafik bileşenlerinin taşmasını engeller, yazılar ve başlıklar sıkışmaz.
 
